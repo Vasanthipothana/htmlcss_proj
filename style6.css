@@ -1,0 +1,371 @@
+
+* {
+  margin: 0;
+ 
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Inconsolata", monospace;
+  height: 100%;
+}
+
+
+.navbar {
+  background-color: #290303;
+  display: flex;
+  justify-content:space-around;
+  padding: 5px 0;
+  position:fixed;
+  top: 0;
+  z-index: 1000; 
+  width: 100%;
+}
+.navbar a {
+  color: white;
+  padding: 10px 20px;  
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition:  0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: rgb(176, 141, 27);
+  transform: scale(1.5);  
+}
+.imgcon {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+
+}
+
+.imgcon > img {
+  width: 100%;
+  height: 100%;
+ 
+   object-fit: cover; 
+  display: block;
+}
+
+.imgcon > .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-weight: normal;
+   transition:  1s ease;
+}
+.text:hover{
+  background-color:#290303;;
+  color: rgb(176, 141, 27);
+  transform: scale(1);  
+}
+
+.bottom-left,
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  transition:  0.3s ease;
+}
+
+.bottom-left {
+  left: 10px;
+}
+
+.bottom-right {
+  right: 10px;
+}
+
+.bottom-left:hover,
+.bottom-right:hover {
+  background-color: #290303;
+  color: rgb(176, 141, 27);
+  transform: scale(1.05);
+}
+.about-section {
+padding: 100px 20px 40px;
+  background-color: #fdfbf9;
+  color: #000;
+  text-align: center;
+}
+
+.about-heading {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  transition:  0.3s ease;
+}
+.about-heading:hover {
+  background-color: #290303;
+  color: rgb(176, 141, 27);
+  transform: scale(1.05);
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Inconsolata', monospace;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-content blockquote {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 30px;
+  
+}
+
+.about-image {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.menu-info {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.menu-title {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  transition:0.3s ease;
+}
+.menu-title:hover {
+  background-color: #290303;
+  color: rgb(176, 141, 27);
+  transform: scale(1.05);
+}
+input[type="radio"] {
+  display: none;
+}
+
+.tabs {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label.tab {
+  flex: 1;
+  padding: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+#eat:checked ~ .tabs label[for="eat"],
+#drink:checked ~ .tabs label[for="drink"] {
+  background-color: #555;
+  color: white;
+}
+
+
+.tab-content {
+  display: none;
+}
+
+#eat:checked ~ .menu-container .eat-content {
+  display: block;
+}
+
+#drink:checked ~ .menu-container .drink-content {
+  display: block;
+}
+
+.menu-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.menu-item {
+  margin-bottom: 25px;
+}
+
+.menu-item h4 {
+  margin-bottom: 5px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #777;
+}
+
+.menu-item .price {
+  float: right;
+  color: #333;
+}
+/* Overall section */
+.where-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fdfbf9;
+}
+
+/* Container to align everything */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* First image */
+.where-image {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+
+.menu-title {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  margin: 10px 0 15px 0;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.menu-title:hover {
+  background-color: #290303;
+  color: rgb(176, 141, 27);
+  transform: scale(1.05);
+}
+
+
+.find-text {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  object-fit: cover;
+}
+
+
+.fyi-text {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fyi-label {
+  background-color: black;
+  color: white;
+  padding: 3px 8px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.reserve-text {
+ text-align: left;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.contact-form {
+  margin-top: 24px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-button {
+  padding: 12px 28px;
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;     
+  width: fit-content;  
+  margin-top: 10px;     
+  transition: 0.3s ease;;   
+}
+
+
+.form-button:hover {
+  background-color:white;
+  color:black;
+}
+.site-footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  color: #333;
+  transition: 0.3s;
+}
+.site-footer:hover {
+  background-color: #290303;
+  color: rgb(176, 141, 27);
+  transform: scale(1.05);
+}
