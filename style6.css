@@ -369,3 +369,6 @@ label.tab {
   color: rgb(176, 141, 27);
   transform: scale(1.05);
 }
+html {
+  scroll-behavior: smooth;
+}
